@@ -52,13 +52,12 @@ function start(){
 
         if(text==='/start'){
             await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/4dd/300/4dd300fd-0a89-3f3d-ac53-8ec93976495e/192/87.webp')
-            await bot.sendMessage(chatId, `Привет ${msg.from.first_name}, Добро пожаловать в бот Эвелиночки!! можем пообщаться`)
+            return bot.sendMessage(chatId, `Привет ${msg.from.first_name}, Добро пожаловать в бот Эвелиночки!! можем пообщаться`)
         }
 
         if(text==='/info'){
             return bot.sendMessage(chatId, `Тебя Зовут ${msg.from.first_name}`)
         }else if(text==='/game'){
-
             return startGame(chatId)
         }else{
             return bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/4dd/300/4dd300fd-0a89-3f3d-ac53-8ec93976495e/192/73.webp')
